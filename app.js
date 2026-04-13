@@ -2,7 +2,7 @@ document.getElementById()
 
 //customer reg input
 const emailaddressInput = document.getELementbyId("emailaddress");
-const passwordinput = document.getELementbyId("password");
+const passwordInput = document.getELementbyId("password");
 const fullNameInput = document.getELementbyId("full name");
 const phonenumberInput = document.getELementbyid("phone number")
 const homeAddressInput = document.getELementbyId("home address");
@@ -31,7 +31,7 @@ registerBtn.addEventListener("click", function () {
 
     const customerData = {
         email: emailaddressInput.value,
-        password: passwordinput.value,
+        password: passwordInput.value,
         full_name: fullNameInput.value,
         phone_number: phonenumberInput.value,
         home_Address: homeAddressInput.value,
@@ -39,7 +39,7 @@ registerBtn.addEventListener("click", function () {
     };
 
 
-    fetch("", {
+    fetch("https://127.0.0.1:8000", {
     method: "POST",
 
     headers: {
@@ -56,9 +56,14 @@ registerBtn.addEventListener("click", function () {
 
      emailaddressInput. value ="";
 
-     fullNameInput.value ="";
+     passwordInput. value ="";
 
-     homeAddressInput.value ="";
+     fullNameInput. value = "";
+
+     phonenumberInput. value = "";
+
+     homeAddressInput. value = "";
+
     })
 
     .catch(error => {
