@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>greenfield local hub</title>
+
+<style>
+
+body{
+    margin:0;
+	font-family:arial;
+	background-color:#655029;
+	color:white;
+}
+
+.header{
+    display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:33px
+}
+
+.title-box{
+    text-align:center;
+	flex:1;
+}
+
+.button button{
+    background:#005C0E;
+	border:none;
+	color:white;
+	padding:20px 125px;
+	margin:5px;
+	font-size:16px;
+	cursor:pointer;
+}
+
+.search{
+    background:#005C0E;
+	padding:20px;
+	text-align:center;
+	font-size:18px;
+}
+
+.nav{
+    background:#005C0E;
+	padding:1px;
+	text-align:center;
+	font-size:25px;
+	cursor:pointer;
+	color:white;
+}
+
+.menu{
+    background:#005C0E;
+	padding:10px;
+	text-align:center;
+	margin:20px auto;
+	width:200px;
+}
+
+.description{
+    font-size:15px;
+	font-family:arial;
+}
+
+
+.images{
+    display:flex;
+	justify-content:space-between;
+	padding:20px;
+}
+
+.images img{
+    width:44%;
+	height:250px;
+	object-fit:cover;
+	margin-bottom:20px;
+}
+
+.footer{
+    background:#005C0E;
+	padding:30px;
+	text-align:center;
+}
+
+.footer-columns{
+    display:flex;
+	justify-content:space-between;
+	margin-top:22px;
+}
+
+
+.footer-columns div{
+    width:10%;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+
+<div class="title-box">
+<h2>greenfield local hub</h2>
+
+
+<div class="button">
+<button>menu page</button>
+</div>
+
+<!-- SEARCH -->
+<div class="search">
+search for
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav">
+<a href="homepage.html">homepage</a> /
+<a href="login.html">login</a> /
+<a href="order.html">order</a> /
+<a href="allergy advice.html">allergy advice</a> / 
+<a href="support page.html">support page</a> /
+<a href="menu.html">menu</a> /
+<a href="opening time.html">opening time</a>/
+<a href="loyalty page.html">loyalty page</a>/
+</div>
+
+<!-- MENU -->
+<div class="menu">
+MENU
+</div>
+
+<!-- DESCRIPTION -->
+<div class="description">
+we have a variety of different items on our menu
+product categories:
+fresh produce(fruits, vegetables, herbs) 
+pantry staples (grains, pasta, canned goods)
+dairy and eggs
+meat, poultry, seafood
+snacks and drinks
+organic products.
+</div>
+
+<div class="description">
+PLEASE NOTE: some of our products may contain allergens please check labels properly or speak to a member of staff if you are unsure.
+</div>
+<div class="images">
+<img scr="veg.webp">
+<img scr="meat.JPG">
+<img scr="eggs.JPG">
+<img scr="snacks.JPG">
+</div>
+
+<section>
+    <h2>Browse Products</h2>
+        <button id="loadProductsBtn">Load All Products</button>
+        <h3>Filter by Category</h3>
+        <input type="number" id="categoryIdInput" placeholder="Enter Category ID">
+        <button id="filterBtn">Filter</button>
+        <div id="productContainer"></div>
+</section>
+
+<script src="app.js"></script> 
+
+</body>
+</html>
+
+<!-- FOOTER -->
+<div class="footer">
+
+<h3>greenfield local hub</h3>
+
+<p>follow us on twitter, instagram and facebook!</p>
+<p>payement methods: credit cards, debit cards, cheque, cash</p>
+<p>terms and conditions, customer review policy, privacy centre, accessibility.</p>
+
+
+
+<div class="footer-columns">
+
+<div>
+<p>my orders</p>
+<p>store location</p>
+<p>help centre</p>
+</div>
+
+<div>
+<p><b>services</b></p>
+<p>click and collect</p>
+<p>(GLH) rewards</p>
+<p>deliveries</p>
+</div>
+
+<div>
+<p><b>help centre</b></p>
+<p>contact us</p>
+<p>how to shop</p>
+<p>product recalls</p>
+</div>
+
+</div>
+
+
