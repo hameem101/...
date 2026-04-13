@@ -1,29 +1,29 @@
 document.getElementById()
 
 //customer reg input
-const emailaddressInput = document.getELementbyId("emailaddress");
-const passwordInput = document.getELementbyId("password");
-const fullNameInput = document.getELementbyId("full name");
-const phonenumberInput = document.getELementbyid("phone number")
-const homeAddressInput = document.getELementbyId("home address");
+const emailaddressInput = document.getELementById("emailaddress");
+const passwordInput = document.getELementById("password");
+const fullNameInput = document.getELementById("full name");
+const phonenumberInput = document.getELementByid("phone number")
+const homeAddressInput = document.getELementById("home address");
 
-const signininput = document.getElementbyId("sign in");
+const signininput = document.getElementById("sign in");
 
-const foodanddrinkinput = document.getElementbyId("food and drink");
+const foodanddrinkinput = document.getElementById("food and drink");
 
 //buttons
 
-const registerbtn = document.getElementbyId("registerBtn");
+const registerbtn = document.getElementById("registerBtn");
 
-const signinbtn = document.getElementbyId("sign inBtn");
+const signinbtn = document.getElementById("sign inBtn");
 
-const foodanddrinkbtn = document.getElementbyId("food and drinkBtn");
+const foodanddrinkbtn = document.getElementById("food and drinkBtn");
 
 // filter inp
 const categoryIdInput = document.getElementById("categoryIdInput");
 
 //display container products
-const productcontainer = document.getELementbyId("productContainer");
+const productcontainer = document.getELementById("productContainer");
 
 
 //add event listener for register button
