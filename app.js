@@ -1,11 +1,11 @@
 document.getElementById()
 
 //customer reg input
-const emailaddressInput = document.getELementById("emailaddress");
-const passwordInput = document.getELementById("password");
-const fullNameInput = document.getELementById("full name");
-const phonenumberInput = document.getELementByid("phone number")
-const homeAddressInput = document.getELementById("home address");
+const emailaddressInput = document.getElementById("emailaddress");
+const passwordInput = document.getElementById("password");
+const fullNameInput = document.getElementById("fullName");
+const phonenumberInput = document.getElementById("phoneNumber");
+const homeAddressInput = document.getElementById("homeAddress");
 
 const signininput = document.getElementById("sign in");
 
@@ -13,21 +13,25 @@ const foodanddrinkinput = document.getElementById("food and drink");
 
 //buttons
 
-const registerbtn = document.getElementById("registerBtn");
+const registerBtn = document.getElementById("registerBtn");
 
-const signinbtn = document.getElementById("sign inBtn");
+const signinBtn = document.getElementById("signinBtn");
 
-const foodanddrinkbtn = document.getElementById("food and drinkBtn");
+const loadProductsBtn = document.getElementById("loadProductsBtn");
+
+const filterBtn = document.getElementById("filterBtn");
+
 
 // filter inp
 const categoryIdInput = document.getElementById("categoryIdInput");
 
 //display container products
-const productcontainer = document.getELementById("productContainer");
+const productContainer = document.getElementById("productContainer");
 
 
 //add event listener for register button
 registerBtn.addEventListener("click", function () {
+    const names = fullNameInput.value.split(" ");
 
     const customerData = {
         email: emailaddressInput.value,
@@ -39,7 +43,7 @@ registerBtn.addEventListener("click", function () {
     };
 
 
-    fetch("https://127.0.0.1:8000", {
+    fetch("http://127.0.0.1:8000/customers", {
     method: "POST",
 
     headers: {
@@ -54,9 +58,9 @@ registerBtn.addEventListener("click", function () {
     .then(data => {
      alert("register successful");
 
-     emailaddressInput. value ="";
+     emailaddressInput. value = "";
 
-     passwordInput. value ="";
+     passwordInput. value = "";
 
      fullNameInput. value = "";
 
@@ -71,6 +75,53 @@ registerBtn.addEventListener("click", function () {
      console.error("error registering please try again:", error);
 
 
+    });
+
+});
+
+
+
+
+
+const emailaddressInput = document.getElementById("emailaddress");
+const passwordInput = document.getElementById("password");
+const fullNameInput = document.getElementById("fullName");
+const phonenumberInput = document.getElementById("phoneNumber");
+const homeAddressInput = document.getElementById("homeAddress");
+
+const registerBtn = document.getElementById("registerBtn");
+
+registerBtn.addEventListener("click", function () {
+
+    const names = fullNameInput.value.split(" ");
+
+    const customerData = {
+        email: emailaddressInput.value,
+        first_name: names[0],
+        last_name: names[1] || ""
+    };
+
+    fetch("http://127.0.0.1:8000/customers", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(customerData)
+    })
+
+    .then(response => response.json())
+    .then(data => {
+        alert("register successful");
+
+        emailaddressInput.value = "";
+        passwordInput.value = "";
+        fullNameInput.value = "";
+        phonenumberInput.value = "";
+        homeAddressInput.value = "";
+    })
+
+    .catch(error => {
+        console.error(error);
     });
 
 });
