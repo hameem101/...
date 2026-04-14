@@ -97,8 +97,11 @@ registerBtn.addEventListener("click", function () {
 
     const customerData = {
         email: emailaddressInput.value,
+        password: passwordInput.value,
         first_name: names[0],
-        last_name: names[1] || ""
+        last_name: names.slice(1).join(" ") || "",
+        phone: phonenumberInput.value,
+        address: homeAddressInput.value
     };
 
     fetch("http://127.0.0.1:8000/customers", {
